@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="/img/logo.ico" type="image/x-icon" />
+    <title>contactos</title>
+    <link rel="stylesheet" href="/css/contactos.css">
+</head>
+<body>
+    <header>
+        <nav>
+          <a href="#">
+            <img class="logo" src="/img/logo.jpg.png" alt="logo" />
+          </a>
+          <ul class="enlaces-menu" id="menu">
+            <li><a href="/index.html">inicio</a></li>
+            <li><a href="reservas.html">reservaciones</a></li>
+            <li><a href="contactos.html">contactos</a></li>
+            <li id="login-button"><a href="#">Login</a></li>
+            <li id="openModal"><a href="#">registro</a></li>
+            <li id="user-name" class="ocultar"></li>
+          </ul>
+          <button class="ham" id="menu-btn" type="button">
+            <span class="br-1"></span>
+            <span class="br-2"></span>
+            <span class="br-3"></span>
+          </button>
+        </nav>
+      </header>
+
+       <!-- Modal registrar -->
+     <div class="modal-overlay" id="modalOverlay">
+      <div class="modal">
+          <button class="modal-close" id="closeModal">&times;</button>
+          <h2>Registro</h2>
+          <form id="registrationForm">
+              <input type="text" id="name" placeholder="Nombre" required>
+              <input type="email" id="email" placeholder="Correo Electrónico" required>
+              <input type="password" id="password" placeholder="password" required>
+              <button class="modal-register" type="submit">Registrar</button>
+              <li id="user-name" class="ocultar"></li>
+          </form>
+      </div>
+    </div>
+
+      <!-- Modal de Login -->
+    <div class="modal-overlay" id="loginModalOverlay">
+      <div class="modal">
+          <button class="modal-close" id="closeLoginModal">&times;</button>
+          <h2>Login</h2>
+          <form id="loginForm">
+              <input type="email" id="loginEmail" placeholder="Correo Electrónico" required>
+              <input type="password" id="loginPassword" placeholder="Contraseña" required>
+              <button class="modal-login" type="submit">Iniciar Sesión</button>
+          </form>
+      </div>
+    </div>
+
+        <!-- Modal de perfil y reservas -->
+    <div class="modal-overlay" id="profileModalOverlay">
+      <div class="modal">
+          <button class="modal-close" id="closeProfileModal">&times;</button>
+          <h2>Perfil y Reservas</h2>
+          <div id="user-profile-info">
+              <p><strong>Nombre:</strong> <span id="profile-name"></span></p>
+              <p><strong>Email:</strong> <span id="profile-email"></span></p>
+          </div>
+          <h3>Reservaciones</h3>
+          <ul id="reservations-list">
+              <!-- Aquí se mostrarán las reservaciones -->
+          </ul>
+      </div>
+    </div>
+
+      <main>
+        
+            <section class="contact-section">
+              <h2>Contacto - El Rincón de Camila</h2>
+              <p>Si tienes alguna pregunta o deseas más información sobre nuestras habitaciones y servicios, no dudes en ponerte en contacto con nosotros. Estaremos encantados de ayudarte.</p>
+          
+              <div class="contact-info">
+                <div class="contact-item">
+                  <h3>Dirección</h3>
+                  <p>El Rincón de Camila, Calle 45 #12-34, Barrio El Tesoro, Medellín, Antioquia, Colombia.</p>
+                </div>
+                <div class="contact-item">
+                  <h3>Teléfono</h3>
+                  <p>+57 3165879239</p>
+                </div>
+                <div class="contact-item">
+                  <h3>Correo Electrónico</h3>
+                  <p>contacto@rincondecamila.com</p>
+                </div>
+              </div>
+          
+              <h3>Formulario de Contacto</h3>
+              <form id="contactForm" action="/submit-form" method="POST">
+                <div class="form-group">
+                  <label for="name">Nombre</label>
+                  <input type="text" id="name" name="name" placeholder="Tu nombre completo" required />
+                </div>
+                <div class="form-group">
+                  <label for="email">Correo Electrónico</label>
+                  <input type="email" id="email" name="email" placeholder="Tu correo electrónico" required />
+                </div>
+                <div class="form-group">
+                  <label for="phone">Teléfono</label>
+                  <input type="tel" id="phone" name="phone" placeholder="Tu número de teléfono" required />
+                </div>
+                <div class="form-group">
+                  <label for="message">Mensaje</label>
+                  <textarea id="message" name="message" rows="5" placeholder="Escribe tu mensaje" required></textarea>
+                </div>
+                <button type="submit" class="submit-btn">Enviar Mensaje</button>
+              </form>
+            </section>
+          
+            <a href="https://wa.me/3165879239" target="_blank" class="whatsapp-button">
+              <img src="https://upload.wikimedia.org/wikipedia/commons/6/6b/WhatsApp.svg" alt="WhatsApp" />
+          </a>
+      </main>
+
+      <footer>
+        <p>&copy; 2025 Mi Página Web | Todos los derechos reservados.</p>
+        <p>
+          <a href="/politicas">Política de privacidad</a> |
+          <a href="/terminos">Términos de servicio</a>
+        </p>
+      </footer>
+</body>
+<script src="/js/contactos.js"></script>
+</html>
